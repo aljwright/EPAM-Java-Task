@@ -72,6 +72,13 @@ public class BankServiceApp {
 
         subscriptionList.forEach(subscription -> System.out.println(subscription.getBankCard()));
 
+        try{
+            Subscription newSubscription = new Subscription();
+            subscriptionList.add(newSubscription);
+        }catch (UnsupportedOperationException ex){
+            System.out.println("expected exception");
+        }
+
         System.out.println("is "+ user.getName() +" a payable user -- "+Service.isPayableUser(user));
 
     }
