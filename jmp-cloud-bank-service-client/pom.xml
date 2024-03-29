@@ -9,19 +9,21 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jmp-cloud-service-impl</artifactId>
+    <artifactId>jmp-cloud-bank-service-client</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>com.epam.learn</groupId>
-            <artifactId>jmp-service-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.epam.learn</groupId>
-            <artifactId>jmp-cmn-exceptions</artifactId>
+            <artifactId>jmp-cloud-service-impl</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>

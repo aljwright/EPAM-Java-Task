@@ -14,6 +14,9 @@
         <module>jmp-cloud-bank-impl</module>
         <module>jmp-cloud-service-impl</module>
         <module>jmp-dto</module>
+        <module>jmp-cloud-bank-service-app</module>
+        <module>jmp-cmn-exceptions</module>
+        <module>jmp-cloud-bank-service-client</module>
     </modules>
 
     <build>
@@ -31,7 +34,6 @@
             </plugins>
         </pluginManagement>
     </build>
-
 
     
 </project>

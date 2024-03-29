@@ -7,4 +7,7 @@ module jmp.cloud.bank.impl {
     uses com.epam.learn.jmp.bank.api.Bank;
 
     exports com.epam.learn.jmp.bank.impl;
+
+    provides com.epam.learn.jmp.bank.api.Bank with com.epam.learn.jmp.bank.impl.BankImpl;
+
 }

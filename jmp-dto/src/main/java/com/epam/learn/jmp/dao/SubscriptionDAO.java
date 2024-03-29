@@ -6,17 +6,36 @@ import com.epam.learn.jmp.dto.Subscription;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class SubscriptionDAO {
 
     List<Subscription> subscriptions ;
 
+    /**
+     * Instantiate SubscriptionDAO
+     */
     public SubscriptionDAO(){
         subscriptions = new ArrayList<>();
     }
 
+    /**
+     *
+     * Create a subscription for the provided Bank Card with provided date
+     * as subscription start date
+     *
+     * @param bankCard bank card to be used for subscription
+     * @param subscriptionStartDate date to indicate subscription start date
+     * @return
+     * boolean to indicate status of the subscribe operation
+     *
+     */
     public boolean subscribe(BankCard bankCard, LocalDate subscriptionStartDate){
+
+        if(Objects.isNull(bankCard) || Objects.isNull(subscriptionStartDate)){
+            return false;
+        }
 
         Subscription subscription = new Subscription();
         subscription.setBankCard(bankCard.getNumber());
@@ -26,9 +45,15 @@ public class SubscriptionDAO {
         return true;
     }
 
+    /**
+     *
+     * Get All Subscriptions from memory
+     *
+     * @return
+     * List of Subscriptions
+     */
    public List<Subscription> getAllSubscriptions(){
-
-        return new ArrayList<>();
+        return this.subscriptions.stream().toList();
    }
 
 }
